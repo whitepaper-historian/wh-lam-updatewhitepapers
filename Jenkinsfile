@@ -12,7 +12,7 @@ pipeline {
 					sh('npm install')
 					sh('zip package.zip -r node_modules')
 					sh('zip -j package.zip index.js')
-					sh('/root/.local/bin/aws lambda update-function-code --function-name GetWhitepapers-DEV --zip-file fileb://package.zip')
+					sh('/root/.local/bin/aws lambda update-function-code --function-name UpdateWhitepapers-DEV --zip-file fileb://package.zip')
 					sh('rm -f package.zip')
 					sh('rm -rf node_modules')
 					sh('rm -f package-lock.json')
