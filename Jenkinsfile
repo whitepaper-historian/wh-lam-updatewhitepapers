@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Deploy') {
 			steps{
-				sh('cd lambda')
+				dir('lambda')
 				sh('rm -f package.zip')
 				sh('npm install')
 				sh('zip -j package.zip -r node_modules')
