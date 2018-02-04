@@ -1,0 +1,11 @@
+{
+	"name": "whitepaper-scrape",
+	"version": "0.0.1",
+	"description": "Get 'em whitepapers",
+	"main": "index.js",
+	"author": "G",
+	"dependencies": {
+		"request": "latest",
+		"cheerio": "latest"
+	}
+}
