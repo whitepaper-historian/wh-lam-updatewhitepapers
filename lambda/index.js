@@ -150,7 +150,7 @@ exports.handler = function(event, context, callback){
             //Value was not found in unfiltered list
             filtered_whitepapers.push(unfiltered_whitepapers[i]);
         }
-        params.RequestItems.whitepapers = filtered_whitepapers.splice();
+        params.RequestItems['whitepapers-dev'] = filtered_whitepapers.splice();
         
         var split_whitepapers = new Array([]);
         var j = 0;
@@ -170,7 +170,7 @@ exports.handler = function(event, context, callback){
 
         if(params) {
             split_whitepapers.forEach(function(sublist) {
-                params.RequestItems.whitepapers = sublist;
+                params.RequestItems['whitepapers-dev'] = sublist;
                 // Add data to dynamoDB
                 const AWS = require('aws-sdk');
     
